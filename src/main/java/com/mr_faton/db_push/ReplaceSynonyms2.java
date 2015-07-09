@@ -21,7 +21,7 @@ public class ReplaceSynonyms2 {
     private static PreparedStatement preparedStatement = null;
 
     public static void main(String[] args) throws SQLException {
-        String message = "Погода в Минске последнее время напоминает мне Лондон. Почти каждый вечер дождь";
+        String message = "давайте вы будете любить меня , а я не обязательно";
         String updatedMessage = "";
 
 
