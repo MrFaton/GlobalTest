@@ -9,13 +9,10 @@ import java.util.Scanner;
 public class Test {
 
     public static void main(String[] args) throws InterruptedException {
-        ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("abc");
-        arrayList.add("def");
-        arrayList.add("ghj");
+        String[] arr = {"2012 Привет", "Ого 2014 уже настопил", "20186", "1976 ujl", "asfj 34 klajsf 43 adkljf 232"};
 
-        for (int i = 0; i < 10; i++) {
-            System.out.println((int) (Math.random() * arrayList.size()));
+        for (String text : arr) {
+            System.out.println(text.replaceAll("2\\d{3}", "*"));
         }
     }
 }
