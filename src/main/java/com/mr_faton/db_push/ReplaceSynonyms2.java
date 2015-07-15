@@ -14,14 +14,14 @@ public class ReplaceSynonyms2 {
     private static final String SQL = "SELECT synonyms FROM " + DB_NAME + "." + TABLE_NAME + " WHERE word=?;";
 
     private static final int MIN_SYN_WORD_LENGTH = 3;
-    private static final int MIN_SYN_PERCENT = 30;
+    private static final int MIN_SYN_PERCENT = 20;
     private static final int MAX_SYN_PERCENT = 80;
 
     private static Connection connection = null;
     private static PreparedStatement preparedStatement = null;
 
     public static void main(String[] args) throws SQLException {
-        String message = "давайте вы будете любить меня , а я не обязательно";
+        String message = "Зависть доведет людей до самоубийства, отвечаю";
         String updatedMessage = "";
 
 
