@@ -10,11 +10,11 @@ import java.util.Scanner;
 public class FillDBFromFile2 {
     private static final String JDBC_URL = "jdbc:mysql://127.0.0.1:3306/tweagle?user=Mr_Faton&password=123";//DB at home
     private static final String DB_NAME = "tweagle";
-    private static final String TABLE_NAME = "new_synonyms";
+    private static final String TABLE_NAME = "synonyms";
     private static final String SQL = "INSERT INTO " + DB_NAME + "." + TABLE_NAME + " (word, synonyms) VALUES (?, ?);";
     private static final String FILE_PATH = "C:\\Synonym.txt";
     private static final int MAX_WORD_STR_LENGTH = 35;
-    private static final int MAX_SYNONYM_STR_LENGTH = 60;
+    private static final int MAX_SYNONYM_STR_LENGTH = 100;
     private static final String DELIMITER_OLD = "|";
     private static final String DELIMITER_NEW = ",";
     private static int CURRENT_LINE = 0;

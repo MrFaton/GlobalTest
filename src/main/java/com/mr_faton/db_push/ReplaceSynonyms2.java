@@ -10,7 +10,7 @@ import java.util.List;
 public class ReplaceSynonyms2 {
     private static final String JDBC_URL = "jdbc:mysql://127.0.0.1:3306/tweagle?user=Mr_Faton&password=123";//DB at home
     private static final String DB_NAME = "tweagle";
-    private static final String TABLE_NAME = "new_synonyms";
+    private static final String TABLE_NAME = "synonyms";
     private static final String SQL = "SELECT synonyms FROM " + DB_NAME + "." + TABLE_NAME + " WHERE word=?;";
 
     private static final int MIN_SYN_WORD_LENGTH = 3;
