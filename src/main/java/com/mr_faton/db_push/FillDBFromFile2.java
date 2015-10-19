@@ -14,9 +14,10 @@ public class FillDBFromFile2 {
     private static final String SQL = "INSERT INTO " + DB_NAME + "." + TABLE_NAME + " (word, synonyms) VALUES (?, ?);";
     private static final String FILE_PATH = "C:\\Synonym.txt";
     private static final int MAX_WORD_STR_LENGTH = 35;
-    private static final int MAX_SYNONYM_STR_LENGTH = 100;
+    private static final int MAX_SYNONYM_STR_LENGTH = 60;
     private static final String DELIMITER_OLD = "|";
     private static final String DELIMITER_NEW = ",";
+    private static final String BAD_WORD = "Ant";
     private static int CURRENT_LINE = 0;
     private static int PROGRESS = 0;
     private static int LINE_NUM = 1_262_744;
@@ -45,10 +46,9 @@ public class FillDBFromFile2 {
                     if (word.length() > MAX_WORD_STR_LENGTH) {
                         continue;
                     }
-                    //the difference! Ignore words that have many synonyms
-                    if (line.length() - word.length() > MAX_SYNONYM_STR_LENGTH) {
-                        continue;
-                    }
+                    //the difference! Ignore words that have many synonyms or have bad word
+                    if (line.contains(BAD_WORD)) continue;
+                    if (line.length() - word.length() > MAX_SYNONYM_STR_LENGTH) continue;
 
                     synonyms = line.substring(++delimiterIndex, line.length());
 
