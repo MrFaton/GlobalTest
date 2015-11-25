@@ -53,8 +53,8 @@ public class StringReplaceDeleteSymbol {
         }
         return new String(updatedArr);
     }
-    public static int[] delete(int[] baseArr, int num) {
-        if (baseArr.length == 0) return baseArr;
-
-    }
+//    public static int[] delete(int[] baseArr, int num) {
+//        if (baseArr.length == 0) return baseArr;
+//
+//    }
 }
